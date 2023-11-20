@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a0aecf8-4883-4c6a-8121-1733f79cbd33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/DETRAN_PROVA/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DETRAN_PROVA/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DETRAN_PROVA/sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DETRAN_PROVA/sistema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DETRAN_PROVA/sistemaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROVA_POO_2023.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PROVA_POO_2023.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DETRAN_PROVA/Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DETRAN_PROVA/vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DETRAN_PROVA/vehicles.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -32,14 +36,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "jdk.selected.JAVA_MODULE": "19",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="DETRAN_PROVA" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.sistemaTest">
+    <configuration name="DETRAN_PROVA in PROVA_POO_2023" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PROVA_POO_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DETRAN_PROVA.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DETRAN_PROVA" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sistemaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PROVA_POO_2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DETRAN_PROVA.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DETRAN_PROVA" />
+      <option name="MAIN_CLASS_NAME" value="DETRAN_PROVA.sistemaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.sistemaTest" />
+        <item itemvalue="JUnit.DETRAN_PROVA in PROVA_POO_2023" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,5 +107,13 @@
       <updated>1700247404968</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PROVA_POO_2023$sistemaTest.ic" NAME="sistemaTest Coverage Results" MODIFIED="1700511306439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>DETRAN_PROVA.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/PROVA_POO_2023$DETRAN_PROVA_in_PROVA_POO_2023.ic" NAME="DETRAN_PROVA in PROVA_POO_2023 Coverage Results" MODIFIED="1700510695079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>DETRAN_PROVA.*</FILTER>
+    </SUITE>
   </component>
 </project>

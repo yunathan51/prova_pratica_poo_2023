@@ -1,28 +1,18 @@
 package DETRAN_PROVA;
 
-import java.util.ArrayList;
+
 
 public class Estrada {
 
     protected String Sigla;
     protected int kilometragem;
     protected Periculosidade periculosidade;
-    private ArrayList<accidents> batidas = new ArrayList<>();
+
 
     @Override
     public String toString(){
         return getSigla() + "-" + getKilometragem() + " PERIGO: " + getPericulosidade();
     }
-
-    public void addAcidente(accidents acidente) {
-        batidas.add(acidente);
-    }
-
-
-
-
-
-
 
 
     public Estrada(){
@@ -68,11 +58,4 @@ public class Estrada {
         this.periculosidade = periculosidade;
     }
 
-    public ArrayList<accidents> getBatidas() {
-        return batidas;
-    }
-
-    public void setBatidas(ArrayList<accidents> batidas) {
-        this.batidas = batidas;
-    }
 }

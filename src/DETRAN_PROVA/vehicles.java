@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class vehicles {
 
     protected String marca;
+
+    public String getModelo() {
+        return modelo;
+    }
+
     protected String modelo;
     protected int ano;
     protected TipoVeiculo tipoVeiculo;
     protected ArrayList<caroneiro> occupantes = new ArrayList<>();
     protected ArrayList<piloto> pilotos = new ArrayList<>();
-
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -51,12 +55,17 @@ public class vehicles {
         NAO_INFORMADO;
 
 
-    }
 
+    }
     public int getAno() {
         return ano;
     }
+
     public TipoVeiculo getTipoVeiculo() {
         return tipoVeiculo;
+    }
+
+    public String getMarca() {
+        return marca;
     }
 }
