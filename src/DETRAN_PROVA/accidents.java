@@ -15,14 +15,13 @@ public class accidents {
         result.append(estrada.getSigla()).append(" - ").append(estrada.getKilometragem()).append(" PERIGO:" + estrada.getPericulosidade()).append("\n");
         result.append("Mes: ").append(mes).append("\n");
 
-        // Detalhes dos veículos envolvidos
+
         for (vehicles veiculo : VeiculosAcidente) {
             result.append(veiculo.toString());
         }
 
         return result.toString();
     }
-
 
     public accidents(){
         this(0, null);
@@ -37,30 +36,14 @@ public class accidents {
         VeiculosAcidente.add(veiculos);
     }
 
-
-
     public int getMes() {
         return mes;
     }
-
-    public void setMes(int mes) {
-        this.mes = mes;
-    }
-
     public Estrada getEstrada() {
         return estrada;
     }
-
-    public void setEstrada(Estrada estrada) {
-
-        this.estrada = estrada;
-    }
-
     public ArrayList<vehicles> getVeiculosAcidente() {
         return VeiculosAcidente;
     }
 
-    public void setVeiculosAcidente(ArrayList<vehicles> veiculosAcidente) {
-        VeiculosAcidente = veiculosAcidente;
-    }
 }

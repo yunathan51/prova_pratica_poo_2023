@@ -34,15 +34,17 @@ public class Util {
         sistema.addVeiculosAcidente(sistema.acidentes.get(1), sistema.vehicles.get(2));
 
 
-        //System.out.println(sistema.acidentes.get(0).toString());
+        System.out.println(sistema.acidentes.get(0).toString());
 
-        //sistema.listarVeiculosComCondutorEmbriagado();
-        //sistema.listarVeiculosDeCargaAcidentados();
-        //sistema.listarRodoviaMaisAcidentesFatais();
-        //sistema.listarAcidentesVeiculosAcima2013();
-        //sistema.listarInformacoesRodovias();
-       // sistema.listarRodoviaComMaisAcidentesDeBicicleta();
+
+        sistema.listarVeiculosComCondutorEmbriagado();
+        sistema.listarVeiculosDeCargaAcidentados();
+        sistema.listarRodoviaMaisAcidentesFatais();
+        sistema.listarAcidentesVeiculosAcima2013();
+        sistema.listarInformacoesRodovias();
+        sistema.listarRodoviaComMaisAcidentesDeBicicleta();
         sistema.listarRodoviasComAcidentesEmFevereiro();
+
 
     }
 }

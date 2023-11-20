@@ -21,8 +21,4 @@ public class piloto extends caroneiro{
     public boolean isEmbriagado() {
         return embriagado;
     }
-
-    public void setEmbriagado(boolean embriagado) {
-        this.embriagado = embriagado;
-    }
 }

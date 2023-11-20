@@ -1,7 +1,5 @@
 package DETRAN_PROVA;
 
-import DETRANSC.veiculo;
-
 import java.util.ArrayList;
 
 public class vehicles {
@@ -84,43 +82,11 @@ public class vehicles {
 
 
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
 
     public int getAno() {
         return ano;
     }
-
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
     public TipoVeiculo getTipoVeiculo() {
         return tipoVeiculo;
-    }
-
-    public void setTipoVeiculo(TipoVeiculo tipoVeiculo) {
-        this.tipoVeiculo = tipoVeiculo;
-    }
-
-    public ArrayList<caroneiro> getOccupants() {
-        return occupantes;
-    }
-
-    public void setOccupants(ArrayList<caroneiro> occupants) {
-        this.occupantes = occupants;
     }
 }

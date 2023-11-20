@@ -30,7 +30,6 @@ public class sistema {
         veiculo.pilotos.add(piloto);
     }
 
-
     public void addPassageiro(vehicles veiculo, String nome, int idade, char sexo, boolean vitimaFatal) {
         caroneiro caroneiro = new caroneiro(nome, idade, sexo, vitimaFatal);
         veiculo.occupantes.add(caroneiro);
