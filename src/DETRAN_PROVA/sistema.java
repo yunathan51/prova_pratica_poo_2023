@@ -7,7 +7,6 @@ public class sistema {
     ArrayList<Estrada> roads = new ArrayList<>();
     ArrayList<vehicles> vehicles = new ArrayList<>();
     ArrayList<accidents> acidentes = new ArrayList<>();
-    ArrayList<sistema> BancoDados = new ArrayList<>();
 
 
 
@@ -26,13 +25,13 @@ public class sistema {
         vehicles.add(vehicle);
     }
 
-    public void addPiloto(vehicles veiculo, String nome, int idade, char sexo, boolean vitimaFatal, boolean embriagado){
+    public void addPiloto(vehicles veiculo, String nome, int idade, char sexo, boolean vitimaFatal, boolean embriagado) {
         piloto piloto = new piloto(nome, idade, sexo, vitimaFatal, embriagado);
         veiculo.pilotos.add(piloto);
     }
 
 
-    public  void addPassageiro(vehicles veiculo, String nome, int idade, char sexo, boolean vitimaFatal){
+    public void addPassageiro(vehicles veiculo, String nome, int idade, char sexo, boolean vitimaFatal) {
         caroneiro caroneiro = new caroneiro(nome, idade, sexo, vitimaFatal);
         veiculo.occupantes.add(caroneiro);
     }
@@ -78,4 +77,46 @@ public class sistema {
         }
     }
 
+    private int contarAcidentesFatais(Estrada rodovia) {
+        int numeroAcidentesFatais = 0;
+
+        for (accidents acidente : acidentes) {
+            if (acidente.getEstrada().equals(rodovia)) {
+                for (vehicles veiculo : acidente.getVeiculosAcidente()) {
+                    for (piloto piloto : veiculo.pilotos) {
+                        if (piloto.isVitimaFatal()) {
+                            numeroAcidentesFatais++;
+                        }
+                    }
+
+                    for (caroneiro ocupante : veiculo.occupantes) {
+                        if (ocupante.isVitimaFatal()) {
+                            numeroAcidentesFatais++;
+                        }
+                    }
+                }
+            }
+        }
+
+        return numeroAcidentesFatais;
+    }
+
+    public void listarRodoviaMaisAcidentesFatais() {
+        String rodoviaMaisAcidentes = null;
+        int maiorNumeroAcidentesFatais = 0;
+
+        for (Estrada rodovia : roads) {
+            int numeroAcidentesFatais = contarAcidentesFatais(rodovia);
+            if (numeroAcidentesFatais > maiorNumeroAcidentesFatais) {
+                maiorNumeroAcidentesFatais = numeroAcidentesFatais;
+                rodoviaMaisAcidentes = rodovia.getSigla();
+            }
+        }
+
+        if (rodoviaMaisAcidentes != null) {
+            System.out.println(rodoviaMaisAcidentes);
+
+        }
+
+    }
 }

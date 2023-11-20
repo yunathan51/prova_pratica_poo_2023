@@ -34,7 +34,8 @@ public class Util {
         //System.out.println(sistema.acidentes.get(0).toString());
 
         //sistema.listarVeiculosComCondutorEmbriagado();
-        sistema.listarVeiculosDeCargaAcidentados();
+        //sistema.listarVeiculosDeCargaAcidentados();
+        sistema.listarRodoviaMaisAcidentesFatais();
 
     }
 }
