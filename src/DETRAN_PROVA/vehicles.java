@@ -11,8 +11,6 @@ public class vehicles {
     protected ArrayList<caroneiro> occupantes = new ArrayList<>();
     protected ArrayList<piloto> pilotos = new ArrayList<>();
 
-
-
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
@@ -35,25 +33,6 @@ public class vehicles {
         return result.toString();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public vehicles() {
         this("", "", 0, TipoVeiculo.NAO_INFORMADO);
     }
@@ -73,15 +52,6 @@ public class vehicles {
 
 
     }
-
-
-
-
-
-
-
-
-
 
     public int getAno() {
         return ano;
