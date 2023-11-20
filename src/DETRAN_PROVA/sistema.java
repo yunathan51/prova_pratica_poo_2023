@@ -102,7 +102,7 @@ public class sistema {
     }
 
     public void listarRodoviaMaisAcidentesFatais() {
-        String rodoviaMaisAcidentes = null;
+        String rodoviaMaisAcidentes = "";
         int maiorNumeroAcidentesFatais = 0;
 
         for (Estrada rodovia : roads) {
@@ -119,4 +119,92 @@ public class sistema {
         }
 
     }
+
+    public void listarAcidentesVeiculosAcima2013() {
+        for (accidents acidente : acidentes) {
+            for (vehicles veiculos : acidente.getVeiculosAcidente()) {
+                if (veiculos.getAno() >= 2013) {
+                    StringBuilder result = new StringBuilder();
+                    result.append("Mes: ").append(acidente.getMes()).append("\n");
+                    result.append("Rodovia: ").append(acidente.getEstrada().getSigla()).append("-").append(acidente.getEstrada().getKilometragem()).append("\n");
+                    result.append(veiculos.toString());
+                    result.append("\n");
+                    System.out.println(result.toString());
+
+                }
+            }
+        }
+
+
+    }
+
+    public void listarInformacoesRodovias() {
+        for (Estrada rodovia : roads) {
+            int totalAcidentes = contarAcidentes(rodovia);
+
+            System.out.println(rodovia.getSigla() + " - " + rodovia.getKilometragem() + " | " +  rodovia.getPericulosidade());
+            System.out.println("Acidentes: " + totalAcidentes);
+            System.out.println();
+        }
+    }
+
+    private int contarAcidentes(Estrada rodovia) {
+        int totalAcidentes = 0;
+
+        for (accidents acidente : acidentes) {
+            if (acidente.getEstrada().equals(rodovia)) {
+                totalAcidentes++;
+            }
+        }
+
+        return totalAcidentes;
+    }
+
+    public void listarRodoviaComMaisAcidentesDeBicicleta() {
+        String rodoviaMaisAcidentesBicicleta = "";
+        int maiorNumeroAcidentesBicicleta = 0;
+
+        for (Estrada rodovia : roads) {
+            int numeroAcidentesBicicleta = contarAcidentesDeBicicleta(rodovia);
+            if (numeroAcidentesBicicleta > maiorNumeroAcidentesBicicleta) {
+                maiorNumeroAcidentesBicicleta = numeroAcidentesBicicleta;
+                rodoviaMaisAcidentesBicicleta = rodovia.getSigla() + "-" + rodovia.getKilometragem() + " | " + rodovia.getPericulosidade();
+            }
+        }
+
+        if (!rodoviaMaisAcidentesBicicleta.isEmpty()) {
+            System.out.println(rodoviaMaisAcidentesBicicleta);
+        } else {
+            System.out.println("Nenhuma rodovia com acidentes de bicicleta encontrada.");
+        }
+    }
+
+    private int contarAcidentesDeBicicleta(Estrada rodovia) {
+        int numeroAcidentesBicicleta = 0;
+
+        for (accidents acidente : acidentes) {
+            if (acidente.getEstrada().equals(rodovia)) {
+                for (vehicles veiculo : acidente.getVeiculosAcidente()) {
+                    if (veiculo.getTipoVeiculo() == DETRAN_PROVA.vehicles.TipoVeiculo.BICICLETA) {
+                        numeroAcidentesBicicleta++;
+                    }
+                }
+            }
+        }
+
+        return numeroAcidentesBicicleta;
+    }
+
+    public void listarRodoviasComAcidentesEmFevereiro() {
+        String acidenteCarnaval = "";
+
+        for (accidents acidente : acidentes) {
+            if (acidente.getMes() == 2) {
+                Estrada rodovia = acidente.getEstrada();
+                acidenteCarnaval = rodovia.getSigla() + " - " + rodovia.getKilometragem();
+                System.out.println(acidenteCarnaval);
+            }
+        }
+    }
+
 }
