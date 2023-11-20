@@ -14,6 +14,9 @@ public class acidentes {
         this.rodovia = rodovia;
     }
 
+
+
+
     public void adicionarVeiculoEnvolvido(veiculo veiculo) {
         veiculosEnvolvidos.add(veiculo);
     }
@@ -31,7 +34,12 @@ public class acidentes {
         }
 
         int totalVitimas = contarVitimas(veiculosEnvolvidos);
+        int totalFeridos = contarFeridos(veiculosEnvolvidos);
+        int totalFatais = contarFatais(veiculosEnvolvidos);
+
         resultado.append("Vítimas no Mês ").append(mes).append(": ").append(totalVitimas).append("\n");
+        resultado.append("Feridos: ").append(totalFeridos).append("\n");
+        resultado.append("Fatais: ").append(totalFatais).append("\n");
 
         return resultado.toString();
     }
@@ -43,4 +51,57 @@ public class acidentes {
         }
         return totalVitimas;
     }
+
+    private int contarFeridos(ArrayList<veiculo> veiculos) {
+        int totalFeridos = 0;
+        for (veiculo veiculo : veiculos) {
+            for (pessoas ocupante : veiculo.getOcupantes()) {
+                if (!ocupante.isVitimaFatal()) {
+                    totalFeridos++;
+                }
+            }
+            for (pessoas condutor : veiculo.getCondutores()) {
+                if (!condutor.isVitimaFatal()) {
+                    totalFeridos++;
+                }
+            }
+        }
+        return totalFeridos;
+    }
+
+    private int contarFatais(ArrayList<veiculo> veiculos) {
+        int totalFatais = 0;
+        for (veiculo veiculo : veiculos) {
+            for (pessoas ocupante : veiculo.getOcupantes()) {
+                if (ocupante.isVitimaFatal()) {
+                    totalFatais++;
+                }
+            }
+            for (condutor condutor : veiculo.getCondutores()) {
+                if (condutor.isVitimaFatal()) {
+                    totalFatais++;
+                }
+            }
+        }
+        return totalFatais;
+    }
+
+    public String condutorDrunk(ArrayList<veiculo> veiculos) {
+        StringBuilder resultado = new StringBuilder();
+        for (veiculo veiculo : veiculos) {
+            for (condutor condutor : veiculo.getCondutores()) {
+                if (condutor.isEmbriagado()) {
+                    resultado.append(condutor);
+                }
+            }
+        }
+        return resultado.toString();
+    }
+
+
+
+
+
+
+
 }

@@ -16,13 +16,11 @@ public class DEBUG {
 
         //--------------
         veiculo v1 = new veiculo("Fiat", "Uno", 2010, veiculo.TipoVeiculo.PASSEIO);
-        veiculo v2 = new veiculo("Volkswagen", "Gol", 2015, veiculo.TipoVeiculo.PASSEIO);
-        veiculo v3 = new veiculoCarga("Kombi", "Kombi", 1960, veiculo.TipoVeiculo.TRANSPORTE_CARGAS, 350);
+
         veiculo v4 = new veiculoCarga("Ford", "Cargo", 2008, veiculo.TipoVeiculo.TRANSPORTE_CARGAS, 6500);
 
         veiculos.add(v1);
-        veiculos.add(v2);
-        veiculos.add(v3);
+
         veiculos.add(v4);
 
         //--------------
@@ -45,6 +43,24 @@ public class DEBUG {
         a1.adicionarVeiculoEnvolvido(v1);
         a1.adicionarVeiculoEnvolvido(v4);
         System.out.println(a1);
+
+
+        acidentes a2 = new acidentes(2, r2);
+        a2.adicionarVeiculoEnvolvido(v1);
+
+        acidentes.add(a1);
+        acidentes.add(a2);
+
+
+
+
+        for (acidentes acidente: acidentes) {
+            System.out.println(acidente.condutorDrunk(veiculos));
+        }
+        //System.out.println(acidentes.condutorDrunk(veiculos));
+
+
+
 
 
     }

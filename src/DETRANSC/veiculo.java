@@ -11,7 +11,7 @@ public class veiculo {
     private ArrayList<pessoas> ocupantes = new ArrayList<>();
     private ArrayList<condutor> condutores = new ArrayList<>();
     private ArrayList<rodovias> rodovias = new ArrayList<>();
-    int qtdVictims = 0;
+
 
 
 
